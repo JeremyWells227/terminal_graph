@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/jeremy/projects/rust/terminal_graph/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+App	src/main.rs	/^impl<'a>  App {$/;"	c
+App	src/main.rs	/^struct App<'a> {$/;"	s
+cli	src/main.rs	/^mod cli;$/;"	n
+main	src/main.rs	/^fn main() -> Result<(), Box<dyn Error>> {$/;"	f
+new	src/main.rs	/^    fn new() -> App<'a> { $/;"	P	implementation:App
+run_app	src/main.rs	/^fn run_app<B: Backend>  ($/;"	f
+text	src/main.rs	/^    text: &'a str,$/;"	m	struct:App
+ui	src/main.rs	/^mod ui;$/;"	n
+ui	src/ui/mod.rs	/^mod ui { $/;"	n

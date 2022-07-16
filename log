@@ -1,0 +1,93 @@
+warning: unused import: `std::iter::Iterator`
+ --> src/ui/menu.rs:1:5
+  |
+1 | use std::iter::Iterator;
+  |     ^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `Alignment`, `Borders`, `ListState`, `Span`, `Widget`
+ --> src/ui/menu.rs:5:19
+  |
+5 |     layout::{Rect,Alignment,Layout,Direction,Constraint},
+  |                   ^^^^^^^^^
+6 |     style::{Style,Modifier,Color},
+7 |     text::{Span,Text},
+  |            ^^^^
+8 |     widgets::{Block,Borders,List,ListItem,Widget,ListState,Paragraph},
+  |                     ^^^^^^^               ^^^^^^ ^^^^^^^^^
+
+warning: unused import: `GraphBox`
+  --> src/main.rs:16:14
+   |
+16 |         Menu,GraphBox
+   |              ^^^^^^^^
+
+warning: value assigned to `max_row` is never read
+  --> src/ui/menu.rs:36:17
+   |
+36 |         let mut max_row = 0;
+   |                 ^^^^^^^
+   |
+   = note: `#[warn(unused_assignments)]` on by default
+   = help: maybe it is overwritten before being read?
+
+warning: unused variable: `row`
+  --> src/ui/menu.rs:41:13
+   |
+41 |         for row in items { 
+   |             ^^^ help: if this is intentional, prefix it with an underscore: `_row`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+  --> src/ui/menu.rs:31:13
+   |
+31 |         let mut selected = SelectedItem::new(0,0);
+   |             ----^^^^^^^^
+   |             |
+   |             help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+warning: variable does not need to be mutable
+  --> src/ui/menu.rs:63:17
+   |
+63 |             let mut list_row = Vec::new();
+   |                 ----^^^^^^^^
+   |                 |
+   |                 help: remove this `mut`
+
+warning: field is never read: `max_row`
+  --> src/ui/menu.rs:20:5
+   |
+20 |     max_row: usize,
+   |     ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: struct is never constructed: `GraphBox`
+ --> src/ui/graphbox.rs:3:12
+  |
+3 | pub struct GraphBox {
+  |            ^^^^^^^^
+
+warning: comparison is useless due to type limits
+  --> src/ui/menu.rs:98:12
+   |
+98 |         if self.selected.x >= 0 {
+   |            ^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_comparisons)]` on by default
+
+warning: comparison is useless due to type limits
+   --> src/ui/menu.rs:114:12
+    |
+114 |         if self.selected.y >= 0 {
+    |            ^^^^^^^^^^^^^^^^^^^^
+
+warning: `terminal_graph` (bin "terminal_graph") generated 11 warnings
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/terminal_graph`
+thread 'main' panicked at 'attempt to subtract with overflow', src/ui/menu.rs:115:46
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

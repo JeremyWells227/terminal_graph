@@ -1,0 +1,15 @@
+[package]
+name = "terminal_graph"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["crossterm"]
+
+[dependencies]
+tui = "0.18.0"
+termion = { version = "1.5", optional = true }
+crossterm = { version = "0.23", optional = true }
+csv = "1.1"
+serde = { version = "1" , features = ["derive"] } 
